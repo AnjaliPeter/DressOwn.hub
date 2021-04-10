@@ -1,12 +1,12 @@
 # DressOwn.hub
 
-DressOwn.hub - Your Perfect Styling Partner
+DressOwn.hub - Your Perfect Styling Partner          
 
-  DressOwn.hub is the place where you can find the best of designer clothes as well as designers for women. If you want to experience the best of women’s wear  online, DressOwn.hub is just the right place. We at DressOwn.hub have the best variety of the latest designs and styles of women’s clothing amongst all other women’s clothing stores.
+  DressOwn.hub is the place where you can find the best of designer clothes as well as designers for women. If you want to experience the best of women’s wear  online, DressOwn.hub is just the right place. We at DressOwn.hub have the best variety of the latest designs and styles of women’s clothing amongst all other women’s clothing stores.                       
 
-  DressOwn.hub has a wide array of designer apparels online. You can purchase designer women’s clothes from our online store that can be delivered to you right at your doorstep. We have some great Indian designer clothes collections from our designer experts. You can also share and publish your own designs with us and our designer experts would surely stitch them for you, if you wanted to do so.
+  DressOwn.hub has a wide array of designer apparels online. You can purchase designer women’s clothes from our online store that can be delivered to you right at your doorstep. We have some great Indian designer clothes collections from our designer experts. You can also share and publish your own designs with us and our designer experts would surely stitch them for you, if you wanted to do so.                
 
-#Be unique, #Be trendy, #Be fashionable with DressOwn.hub
+#Be unique, #Be trendy, #Be fashionable with DressOwn.hub      
 
 
 # Access project
@@ -20,20 +20,20 @@ localhost:4200
 
 # Signup / Signin
 
-*** Account registration is mandatory for new users to access the exclusive features such as select design, create design and stitch design
+*** Account registration is mandatory for new users to access the exclusive features such as select design, create design and stitch design             
 
-How to register a DressOwn.hub account :-
+How to register a DressOwn.hub account :-                      
 
-Register as a Designer :
-  Step 1: Click " Signup " to get a signup form.
-  Step 2: Enter your name and a valid E-mail address
-  Step 3: Select your designation as " Designer "
-  Step 4: Select " Stitching " as purpose of registration
-  Step 5: Set a strong password for your account
-  Step 6: Provide a phone number for recovery purposes of your account
-  Step 7: By clicking SignUp button, your details will be validated by DressOwn.hub
-  Step 8: You will be directed to the SignIn page once your account is validated
-  Step 9: You can now signin with your E-mail address and password
+Register as a Designer :            
+  Step 1: Click " Signup " to get a signup form                
+  Step 2: Enter your name and a valid E-mail address           
+  Step 3: Select your designation as " Designer "           
+  Step 4: Select " Stitching " as purpose of registration          
+  Step 5: Set a strong password for your account            
+  Step 6: Provide a phone number for recovery purposes of your account              
+  Step 7: By clicking SignUp button, your details will be validated by DressOwn.hub               
+  Step 8: You will be directed to the SignIn page once your account is validated             
+  Step 9: You can now signin with your E-mail address and password             
 
 
 Register as a Customer :
