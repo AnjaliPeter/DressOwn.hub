@@ -14,7 +14,7 @@ DressOwn.hub - Your Perfect Styling Partner
 Access the DressOwn.hub platform after running the Angular project using link :  
 localhost:4200        
 
-  To initialize the backend : node app.js
+  To initialize the backend : node app.js          
   To initialize the frontend : ng serve
 
 
