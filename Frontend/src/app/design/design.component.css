@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Berkshire Swash");
+@import url("https://fonts.googleapis.com/css?family=Basic");
+@import url("https://fonts.googleapis.com/css?family=Andada");
+
+
+.main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-content: center;
+}
+
+.left{
+    background-color: rgb(248, 218, 248);
+    width: 20%;
+    height: 550px;
+    overflow: scroll;
+    overflow-x: hidden;
+    /* border-radius: 10px; */
+    padding: 20px;
+    /* margin: 10px; */
+}
+
+span{
+    color: rgb(241, 90, 90);
+}
+
+.btnradio:hover{
+    background-color: rgb(143, 69, 150);
+    color: white;
+    border: 1px solid  rgb(143, 69, 150);
+}
+
+.btnradio{
+    border: 2px solid rgb(83, 24, 83);
+    border-radius: 2em;
+    width: 100px;
+    height: 33px;
+    margin-left: 12px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 3px;
+    text-decoration: none;
+    color: rgb(83, 24, 83);
+    text-align: center;
+} 
+
+.active{
+    background-color: rgb(143, 69, 150);
+    color: white;
+    border: 1px solid  rgb(143, 69, 150);
+    border-radius: 2em;
+    width: 100px;
+    height: 33px;
+    margin-left: 12px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 3px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.inactive{
+    background-color: none;
+    border: 2px solid rgb(83, 24, 83);
+    border-radius: 2em;
+    width: 100px;
+    height: 33px;
+    margin-left: 12px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 3px;
+    text-decoration: none;
+    color: rgb(83, 24, 83);
+    text-align: center;
+}
+
+/* #btnradio1.active{
+    background-color: rgb(143, 69, 150);
+    color: white;
+    border: 1px solid  rgb(143, 69, 150);
+    border-radius: 2em;
+    width: 100px;
+    height: 33px;
+    margin-left: 12px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 3px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#btnradio1.inactive{
+    background-color: none;
+    border: 2px solid rgb(83, 24, 83);
+    border-radius: 2em;
+    width: 100px;
+    height: 33px;
+    margin-left: 12px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 3px;
+    text-decoration: none;
+    color: rgb(83, 24, 83);
+    text-align: center;
+} */

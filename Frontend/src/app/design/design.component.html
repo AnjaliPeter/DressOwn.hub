@@ -1,0 +1,15 @@
+<div>
+    <div class="main">
+        <div class="left">
+            <div class="buttons row" >
+                <a routerLink="/home/design" id="btnradio1" class="btnradio" (click)="select()">Select</a>
+                <a [routerLink]="['/home/design', {outlets: {'sidebar': ['create'],'designarea':['create']}}]" id="btnradio2" class="btnradio" (click)="create()">Create</a>
+            </div>
+            <hr>
+            <router-outlet name="sidebar"></router-outlet>
+        </div>
+        <div class="right">
+            <router-outlet name="designarea"></router-outlet>
+        </div>
+    </div>
+</div>
