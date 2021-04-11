@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Berkshire Swash");
+@import url("https://fonts.googleapis.com/css?family=Basic");
+@import url("https://fonts.googleapis.com/css?family=Amarante");
+@import url("https://fonts.googleapis.com/css?family=Aref Ruqaa");
+@import url("https://fonts.googleapis.com/css?family=Belgrano");
+@import url("https://fonts.googleapis.com/css?family=BioRhyme");
+
+
+.page{
+    margin: 0%;
+    padding-top: 3em;
+    padding-left: 6em;
+    padding-bottom: 4em;
+}
+
+.design{
+    width: 95%;
+    height: 95%;
+    background-color: rgb(252, 204, 252);
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+#designimg{
+    width: 350px;
+    height: 450px;
+    border-radius: 8px;
+    margin: 1em;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.design-desc{
+    margin: 2em;
+    margin-left: 4em;
+}
+
+.vl{
+    border-left: 1px solid gray;
+    height: auto;
+    margin-left: 2em;
+}
+
+#title{
+    color: rgb(48, 47, 47);
+    font-weight: bold;
+    font-family: "Belgrano";
+    font-size: 25px;
+}
+
+#price{
+    font-weight: bold;
+    color: rgb(83, 82, 82);
+}
+
+#select-btn{
+    background-color: rgb(182, 97, 182);
+    border: 1px solid rgb(151, 80, 151);
+    border-radius: 10px;
+    color: white;
+    width: fit-content;
+    justify-content: center;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#details{
+    font-weight: bold;
+    color: rgb(85, 83, 83);
+    font-family: "Basic";
+    font-size: 20px;
+}
+
+.col1{
+    margin-left: 2em;
+    font-family: "BioRhyme";
+}
+
+.col2{
+    margin-left: 2em;
+    font-family: "BioRhyme";
+}
+
+.col3{
+    margin-left: 2em;
+    font-family: "BioRhyme";
+}
+
+.form-check{
+    height: auto;
+}
+
+#flexCheckDefault{
+    margin-left: 10px;
+}
+
+.form-check-label{
+    margin-left: 30px;
+}
