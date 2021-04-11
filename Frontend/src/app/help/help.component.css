@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Basic");
+@import url("https://fonts.googleapis.com/css?family=Andada");
+
+
+.main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-content: center;
+}
+
+.left{
+    background-color: rgb(248, 218, 248);
+    width: 22%;
+    height: auto;
+    padding: 20px;
+    /* margin: 10px; */
+}
+
+#contents{
+    margin-left: 20px;
+    font-family: "Andada";
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(87, 86, 86);
+}
+
+.sections{
+    margin-left: 3em;
+    margin-top: 2em;
+}
+
+a{
+    color: rgb(36, 35, 35);
+    /* margin-bottom: 45px; */
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Basic";
+    text-align: justify;
+}
