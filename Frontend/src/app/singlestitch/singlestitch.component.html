@@ -1,0 +1,98 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+
+<div class="page">
+    <br>
+    <div class="row design">
+        <div class="column">
+            <img id="designimg" src="../../assets/images/stitchpics/{{designObj.image}}" alt="design">
+        </div>
+        <div class="vl"></div>
+        <div class="column design-desc">
+            <h4 id="title">{{designObj.title}}</h4>
+            <p id="price">{{designObj.category}}<br>
+                <p id="price">₹{{designObj.price}}<br>
+                {{designObj.size}}</p>
+            <br>
+            <button id="select-btn" data-toggle="modal" data-target="#acceptmodal">Accept Design</button>
+            <br><br><br>
+            <h6 id="details">Design Details -</h6>
+            <div class="row">
+                <div class="column">
+                    <div class="row">
+                        <div class="column col1">
+                            Designed By<br>
+                            Bust<br>
+                            Waist<br>
+                            Hip<br>
+                            Neck<br>
+                        </div> 
+                        <div class="column col2"> : <br> : <br> : <br> : <br> : <br></div>
+                        <div class="column col3">
+                            {{designObj.customerid}}<br>
+                            {{designObj.bust}}<br>
+                            {{designObj.waist}}<br>
+                            {{designObj.hip}}<br>
+                            {{designObj.neck}}<br>
+                        </div>
+                    </div>
+                </div>
+            <div class="column col1">
+                <div class="row">
+                    <div class="column col1">
+                        Shoulder<br>
+                        Bustspread<br>
+                        Backwidth<br>
+                        Frontlength<br>
+                        Backlength
+                    </div> 
+                    <div class="column col2"> : <br> : <br> : <br> : <br> : <br></div>
+                    <div class="column col3">
+                        {{designObj.shoulder}}<br>
+                        {{designObj.bustspread}}<br>
+                        {{designObj.backwidth}}<br>
+                        {{designObj.frontlength}}<br>
+                        {{designObj.backlength}}
+                    </div>
+                </div>
+            </div>
+            </div>
+            <br><br>
+            <h6 id="details">Description -</h6>
+            <div class="col1 desc">{{designObj.description}}</div>
+        </div>
+    </div>
+    <br><br>
+</div>
+
+  
+<div class="modal fade" id="acceptmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Make an offer for this design :</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="input-group mb-3 col">
+                <span class="input-group-text" id="basic-addon1">Offer</span>
+                <input type="text" class="form-control" value="₹ " aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3 col">
+                <span class="input-group-text" id="basic-addon1">Explanation</span>
+                <textarea class="form-control" id="message-text"></textarea>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="sendoffer(designObj.customerid)">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
