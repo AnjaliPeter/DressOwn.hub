@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Berkshire Swash");
+@import url("https://fonts.googleapis.com/css?family=Basic");
+
+
+#tagpic{
+    width: 100%;
+    height: 450px;
+}
+
+#centered{
+    position: absolute;
+    top: 50%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-family: "Berkshire Swash";
+    font-size: 45px;
+    opacity: 0.9;
+    text-shadow: 2px 2px #a978d6;
+}
+
+#cntnt{
+    color: white;
+    margin-top: 3%;
+    font-size: 25px;
+    font-weight: lighter;
+    font-family: "Basic";
+    text-shadow: #b78ae0;
+}
+
+.gallery {
+    /* margin: 5px; */
+    margin-left: 22px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 270px;
+    background-color: rgb(247, 223, 253);
+}
+  
+.gallery img {
+    width: 266px;
+    height: 251px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+  
+.desc {
+    padding: 15px;
+    text-align: center;
+} 
+
+.trend-decor{
+    background-color: rgb(255, 220, 255);
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+label{
+    color: black;
+    padding: 5px;
+    margin-left: 38%;
+    font-weight: bold;
+}
+
+h4{
+    font-family: "Basic";
+}
