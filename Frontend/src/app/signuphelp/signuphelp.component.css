@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Amarante");
+@import url("https://fonts.googleapis.com/css?family=Aref Ruqaa");
+@import url("https://fonts.googleapis.com/css?family=Belgrano");
+@import url("https://fonts.googleapis.com/css?family=BioRhyme");
+
+
+.page{
+    padding: 1em;
+    padding-left: 3em;
+}
+
+#contents{
+    margin-top: 8px;
+    margin-left: 20px;
+    font-family: "Andada";
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(87, 86, 86);
+}
+
+.section{
+    margin-left: 4em;
+    margin-top: 1em;
+}
+
+#sechead{
+    font-family: "Aref Ruqaa";
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.steps{
+    font-family: "Belgrano";
+    margin-left: 1em;
+}
