@@ -7,16 +7,11 @@ mongoose.connect("mongodb+srv://AnjaliPeter:dressown@dressown.ncrb9.mongodb.net/
 
 const Schema = mongoose.Schema;
 
-const DesignSchema = new Schema({
-    title : String,
+const PrototypeSchema = new Schema({
     category : String,
     color : String,
-    image : String,
-    description : String,
-    price : Number,
-    offer : String,
-    size : String
+    image : String
 });
 
-var Designdata = mongoose.model("designdata",DesignSchema);
-module.exports = Designdata;
+var Prototypedata = mongoose.model("prototypedata",PrototypeSchema);
+module.exports = Prototypedata;
