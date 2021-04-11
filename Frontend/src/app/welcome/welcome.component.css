@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Berkshire Swash");
+@import url("https://fonts.googleapis.com/css?family=Basic");
+
+
+#login-line{
+    margin-left: 38%;
+    padding: 5px;
+    font-weight: bolder;
+    text-decoration: underline;
+    color: black;
+}
+
+.login-bg{
+    background-color: rgb(233, 200, 233);
+}
+
+.carousel-decor{
+    background-color: rgb(245, 215, 245);
+}
+
+img{
+    height: 300px;
+}
+
+.welcome-decor{
+    background-color: rgb(255, 235, 255);
+}
+
+.row{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tag-left{
+    margin-left: 8%;
+    margin-top: 8%;
+    font-family: "Berkshire Swash";
+    font-size: 40px;
+}
+
+#tagpic-right{
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 450px;
+    height: 300px;
+    border: 5px solid rgb(136, 71, 136);
+    border-radius: 1em;
+}
+
+#tag-right{
+    margin-left: 14%;
+    margin-top: 8%;
+    font-family: "Berkshire Swash";
+    font-size: 40px;
+}
+
+#tagpic-left{
+    margin-left: 8%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 450px;
+    height: 300px;
+    border: 5px solid rgb(136, 71, 136);
+    border-radius: 1em;
+}
+
+#cntnt{
+    color: black;
+    margin-top: 3%;
+    font-size: 25px;
+    font-weight: lighter;
+    font-family: "Basic";
+}
