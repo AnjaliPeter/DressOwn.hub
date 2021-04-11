@@ -1,0 +1,80 @@
+<div class="page">
+<form method="POST" class="text-center card form bg-light p-5 col-md-6" (ngSubmit)="addAccount()">
+
+    <p class="h4 mb-4 bg-info card-header">Sign Up</p>
+
+    <div class="form-row mb-4">
+      <div class="col">
+       
+        <input type="text" id="defaultRegisterFormFirstName" name="firstname" [(ngModel)]="accountItem.firstname" class="form-control" placeholder="First name">
+      </div>
+      <div class="col">
+       
+        <input type="text" id="defaultRegisterFormLastName" class="form-control" name="lastname" [(ngModel)]="accountItem.lastname" placeholder="Last name">
+      </div>
+    </div>
+
+    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" name="email" [(ngModel)]="accountItem.email" placeholder="E-mail">
+
+    <label for="designation" class="text-muted">Designation</label>
+    <select id="defaultRegisterFormEmail" name="designation" [(ngModel)]="accountItem.designation" class="form-control mb-4">
+      <option value="Designer">Designer</option>
+      <option value="Customer">Customer</option>
+    </select>
+    
+    <label for="registration" class="text-muted">Purpose of registration</label>
+    <select id="defaultRegisterFormEmail" name="purpose" [(ngModel)]="accountItem.purpose" aria-label="Default" class="form-control mb-4">
+      <option value="Stitching">Stitching</option>
+      <option value="Shopping">Shopping</option>
+    </select>
+
+    
+    <input type="password" id="defaultRegisterFormPassword" class="form-control" name="password" [(ngModel)]="accountItem.password" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+    <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+      At least 8 characters and 1 digit
+    </small>
+
+  
+    <input type="text" id="defaultRegisterPhonePassword" class="form-control" name="phoneno" [(ngModel)]="accountItem.phoneno" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+    <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+      Optional - for two-step authentication
+    </small>
+
+   
+
+    <!-- Sign up button -->
+    <button id="signup-btn" type="submit">Sign Up</button>
+    <br>
+
+    <!-- Register -->
+    <p>Already have an account?
+      <a routerLink="/signin">SignIn</a>
+    </p>
+
+    <!-- Social register -->
+    <p>or sign up with:</p>
+
+    <div class="row icons">
+    <a type="button" class="light-blue-text mx-2">
+      <img src="../../assets/images/logopics/twitter.png" alt="twitter">
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <img src="../../assets/images/logopics/facebook.png" alt="facebook">
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <img src="../../assets/images/logopics/insta.png" alt="instagram">
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <img src="../../assets/images/logopics/linkedin.png" alt="linkedin">
+    </a>
+    </div>
+
+    <hr>
+
+    <!-- Terms of service -->
+    <p>By clicking
+      <em>Sign up</em> you agree to our
+      <a href="" target="_blank">terms of service</a></p>
+
+  </form>
+</div>
