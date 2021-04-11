@@ -1,0 +1,90 @@
+label{
+    color: black;
+    padding-top: 5px;
+    margin-left: 42%;
+    font-weight: bold;
+}
+
+.hl{
+    border-top: 1px solid gray;
+    width: auto;
+}
+
+.designs{
+    width: 63em;
+}
+
+.gallery {
+    margin-top: 40px;
+    margin-left: 52px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 200px;
+    height: 423px;
+    background-color: rgb(247, 223, 253);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+  
+.gallery img {
+    width: 198px;
+    height: 300px;
+    border-radius: 8px;
+    /* border: 1px solid #ccc; */
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+  
+.desc {
+    padding: 15px;
+    text-align: center;
+} 
+
+.trend-decor{
+    display: none;
+} 
+
+#loadmore-btn:hover {
+    color: rgb(41, 15, 63);
+    background-color: rgb(237, 197, 255);
+    border: 1px solid rgb(76, 19, 94);
+    text-decoration: none;
+}
+
+.noContent{
+    color: #000 !important;
+    background-color: transparent !important;
+    pointer-events: none;
+}
+
+#loadmore-btn{
+    width: 200px;
+    color: rgb(228, 207, 233);
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-color: rgb(101, 54, 133);
+    transition: .3s;
+}
+
+#title{
+    color: rgb(116, 114, 114);
+    padding-top: 5px;
+    padding-left: 12px;
+    font-weight: bold;
+}
+
+#price{
+    font-weight: bold;
+    color: rgb(65, 64, 64);
+    margin-left: 12px;
+}
+
+#size{
+    margin: 0%;
+}
