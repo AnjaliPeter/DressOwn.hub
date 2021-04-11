@@ -1,0 +1,411 @@
+<script type="text/javascript" src="html2canvas-master/dist/html2canvas.js"></script>
+<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<div id="page"> 
+  <label for="tagline">We Stitch Your Style...!</label>
+<div class="hl"></div> 
+  <div class="row">
+    <div class="column">
+      <div class="container" id="container"></div>
+      <br><br>
+      <div class="row">
+        <button id="design-btn" data-toggle="modal" data-target="#savemodal">Save Design</button>
+        <button id="design-btn" data-toggle="modal" data-target="#uploadmodal">Upload Design</button>
+      </div>
+    </div>
+    <div class="vl"></div>
+    <div class="gallery" id="screenshot">
+      <div class="row">
+        <button id="category-btn" class="coulmn"  (click)="toggleOn3 =!toggleOn3">Gowns</button>
+        <button id="category-btn" class="coulmn"  (click)="toggleOn5 =!toggleOn5">Skirts</button>
+        <button id="category-btn" class="coulmn"  (click)="toggleOn2 =!toggleOn2">Bottoms</button>
+        <button id="category-btn" class="coulmn"  (click)="toggleOn6 =!toggleOn6">Tops</button>
+        <button id="category-btn" class="coulmn" (click)="toggleOn1 =!toggleOn1">Waistlines</button>
+        <button id="category-btn" class="coulmn"  (click)="toggleOn4 =!toggleOn4">Scarfs</button>
+      </div>
+
+      <div *ngIf="toggleOn3" class="row">
+        <div class="example-box" cdkDrag *ngFor="let prototype of prototypes; let index=index;">
+          <div *ngIf="index>19&&index<36">
+            <div class="dimensions">
+              <button data-toggle="modal" data-target="#gownmodal"><i class="fa fa-bars"></i></button>
+              <!-- <button class="rem-btn">
+                <span aria-hidden="true">&times;</span>
+              </button> -->
+            </div>
+            <img src="../../assets/images/prototypes/{{prototype.image}}" alt="proto" height={{gownheight}} width={{gownwidth}}>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="toggleOn5" class="row">
+        <div class="example-box" cdkDrag *ngFor="let prototype of prototypes; let index=index;">
+          <div *ngIf="index>38&&index<52">
+            <div class="dimensions">
+              <button data-toggle="modal" data-target="#skirtmodal"><i class="fa fa-bars"></i></button>
+            </div>
+            <img src="../../assets/images/prototypes/{{prototype.image}}" alt="proto" height={{skirtheight}} width={{skirtwidth}}>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="toggleOn2" class="row">
+        <div class="example-box" cdkDrag *ngFor="let prototype of prototypes; let index=index;">
+          <div *ngIf="index>10&&index<20">
+            <div class="dimensions">
+              <button data-toggle="modal" data-target="#bottommodal"><i class="fa fa-bars"></i></button>
+            </div>
+            <img src="../../assets/images/prototypes/{{prototype.image}}" alt="proto" height={{bottomheight}} width={{bottomwidth}}>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="toggleOn6" class="row">
+        <div class="example-box"  cdkDrag *ngFor="let prototype of prototypes; let index=index;">
+          <div *ngIf="index>51&&index<59">
+            <div class="dimensions">
+              <button data-toggle="modal" data-target="#topmodal"><i class="fa fa-bars"></i></button>
+            </div>
+            <img src="../../assets/images/prototypes/{{prototype.image}}" alt="proto" height={{topheight}} width={{topwidth}}>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="toggleOn1" class="row">
+          <div class="example-box" cdkDrag *ngFor="let prototype of prototypes; let index=index;">
+            <div *ngIf="index<11">
+              <div class="dimensions">
+                <button data-toggle="modal" data-target="#beltmodal"><i class="fa fa-bars"></i></button>
+              </div>
+              <img src="../../assets/images/prototypes/{{prototype.image}}" alt="proto" height={{beltheight}} width={{beltwidth}}>
+            </div>
+        </div>
+      </div>
+
+      <div *ngIf="toggleOn4" class="row">
+        <div class="example-box" cdkDrag *ngFor="let prototype of prototypes; let index=index;">
+          <div *ngIf="index>35&&index<39">
+            <div class="dimensions">
+              <button data-toggle="modal" data-target="#scarfmodal"><i class="fa fa-bars"></i></button>
+            </div>
+            <img src="../../assets/images/prototypes/{{prototype.image}}" alt="proto" height={{scarfheight}} width={{scarfwidth}}>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+  <br><br><br>
+
+  <div class="modal fade" id="beltmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Change Image Dimensions:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Height</span>
+            <input type="text" class="form-control" [(ngModel)]="beltheight" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Width</span>
+            <input type="text" class="form-control"  [(ngModel)]="beltwidth" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="close-btn" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="bottommodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Change Image Dimensions:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Height</span>
+            <input type="text" class="form-control" [(ngModel)]="bottomheight" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Width</span>
+            <input type="text" class="form-control"  [(ngModel)]="bottomwidth" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="close-btn" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="gownmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Change Image Dimensions:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Height</span>
+            <input type="text" class="form-control" [(ngModel)]="gownheight" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Width</span>
+            <input type="text" class="form-control"  [(ngModel)]="gownwidth" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="close-btn" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="scarfmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Change Image Dimensions:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Height</span>
+            <input type="text" class="form-control" [(ngModel)]="scarfheight" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Width</span>
+            <input type="text" class="form-control"  [(ngModel)]="scarfwidth" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="close-btn" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="skirtmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Change Image Dimensions:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Height</span>
+            <input type="text" class="form-control" [(ngModel)]="skirtheight" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Width</span>
+            <input type="text" class="form-control"  [(ngModel)]="skirtwidth" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="close-btn" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="topmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Change Image Dimensions:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Height</span>
+            <input type="text" class="form-control" [(ngModel)]="topheight" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Width</span>
+            <input type="text" class="form-control"  [(ngModel)]="topwidth" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="close-btn" data-dismiss="modal">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="modal fade" id="uploadmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Upload your design as an image file :</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body row">
+          <img src="{{url}}" alt="deafault image" height="100" width="100">
+          <br><br>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Image file</span>
+            <input type="file" (change)="selected($event)" class="form-control" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary up-btn" id="close-btn" data-dismiss="modal" data-toggle="modal" (click)="setMeasure()">Upload</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="savemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Your design has been saved !<br>
+            Now, set measurements (in inches) for your design :</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="input-group mb-3 col">
+              <span class="input-group-text" id="basic-addon1">Bust</span>
+              <input type="text" class="form-control" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3 col">
+              <span class="input-group-text" id="basic-addon1">Waist</span>
+              <input type="text" class="form-control" aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-group mb-3 col">
+              <span class="input-group-text" id="basic-addon1">Hips</span>
+              <input type="text" class="form-control" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3 col">
+              <span class="input-group-text" id="basic-addon1">Neck</span>
+              <input type="text" class="form-control" aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-group mb-3 col">
+              <span class="input-group-text" id="basic-addon1">Shoulder</span>
+              <input type="text" class="form-control" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3 col">
+              <span class="input-group-text" id="basic-addon1">Bust spread</span>
+              <input type="text" class="form-control" aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-group mb-3 col">
+              <span class="input-group-text" id="basic-addon1">Back width</span>
+              <input type="text" class="form-control" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3 col">
+              <span class="input-group-text" id="basic-addon1">Front length</span>
+              <input type="text" class="form-control" aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-group mb-3 col">
+              <span class="input-group-text" id="basic-addon1">Back length</span>
+              <input type="text" class="form-control" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3 col">
+              <span class="input-group-text" id="basic-addon1">Size</span>
+              <input type="text" class="form-control" aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-group mb-3 col">
+              <span class="input-group-text" id="basic-addon1">Others</span>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-content modal-body">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><br>
+              Select designers and affordable price for stitching :</h5>
+          </div><br>
+          <div class="row">
+            <div class="input-group mb-3 col">
+              <span class="input-group-text" id="basic-addon1">Designers</span>
+              <div class="form-check form-control" aria-describedby="basic-addon1">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <p class="form-check-label" for="flexCheckDefault">Mr. Aravind nair</p>
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <p class="form-check-label" for="flexCheckDefault">Ms. Rekha Panikkar</p>
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <p class="form-check-label" for="flexCheckDefault">Ms. Meera Anand</p>
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <p class="form-check-label" for="flexCheckDefault">Mr. Shivanand Sinha</p>
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <p class="form-check-label" for="flexCheckDefault">Mr. Manu Balakrishnan</p>
+              </div><br>
+            </div>
+            <div class="input-group mb-3 col">
+              <span class="input-group-text" id="basic-addon1">Price</span>
+              <div class="form-check form-control" aria-describedby="basic-addon1">
+                <input class="form-check-input" type="radio" value="" id="flexCheckDefault">
+                <p class="form-check-label" for="flexCheckDefault">₹500 - ₹1000</p>
+                <input class="form-check-input" type="radio" value="" id="flexCheckDefault">
+                <p class="form-check-label" for="flexCheckDefault">₹1000 - ₹2500</p>
+                <input class="form-check-input" type="radio" value="" id="flexCheckDefault">
+                <p class="form-check-label" for="flexCheckDefault">₹2500 - ₹3500</p>
+                <input class="form-check-input" type="radio" value="" id="flexCheckDefault">
+                <p class="form-check-label" for="flexCheckDefault">₹3500 - ₹5000</p>
+                <input class="form-check-input" type="radio" value="" id="flexCheckDefault">
+                <p class="form-check-label" for="flexCheckDefault">Above ₹5000</p>
+              </div><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-group mb-3 col">
+              <span class="input-group-text" id="basic-addon1">Others</span>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="close-btn" data-dismiss="modal" data-toggle="modal" (click)="setMeasure()">Set</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div>
